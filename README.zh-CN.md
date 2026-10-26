@@ -20,6 +20,8 @@
 
 ## 本地演示
 
+可直接打开 **[在线合成数据演示](https://tqyyds.github.io/bnpl-merchant-decision-support/)**，或在本地运行：
+
 ```bash
 git clone https://github.com/tqyyds/bnpl-merchant-decision-support.git
 cd bnpl-merchant-decision-support

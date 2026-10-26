@@ -8,7 +8,7 @@
 
 An independently developed applied data science project by **[tqyyds](https://github.com/tqyyds)**. It turns transaction history into an auditable shortlist of up to 100 Buy Now, Pay Later merchants using temporal revenue modelling, explicit eligibility rules, confidence diagnostics and mixed-integer portfolio optimisation.
 
-**[Explore the code](engines/) · [Results and evidence](docs/RESULTS.md) · [Architecture](docs/ARCHITECTURE.md) · [中文说明](README.zh-CN.md)**
+**[Live demo](https://tqyyds.github.io/bnpl-merchant-decision-support/) · [Explore the code](engines/) · [Results and evidence](docs/RESULTS.md) · [Architecture](docs/ARCHITECTURE.md) · [中文说明](README.zh-CN.md)**
 
 ![Merchant portfolio dashboard using invented demo records](docs/assets/dashboard-overview.png)
 
@@ -36,6 +36,8 @@ These are **historical validation results** from saved run `seven_v1_20260906`, 
 NDCG measures ranking quality using nonnegative linear revenue gain. Oracle capture compares the realised take-rate revenue of the predicted Top-100 with the hindsight best Top-100 at the same cutoff. These are ranking and revenue-proxy metrics, not classification accuracy or profit. [Inspect the source JSON](reports/portfolio/model_comparison.json).
 
 ## Try the dashboard
+
+**[Open the live synthetic demo](https://tqyyds.github.io/bnpl-merchant-decision-support/)**, or run it locally:
 
 The public demonstration uses **30 invented merchants**, including a synthetic selected portfolio of 10. It requires only Python's standard library, no private data, API keys or model downloads.
 

@@ -6,6 +6,8 @@
 Python, pandas, PyArrow, scikit-learn, PyTorch, SciPy MILP, JavaScript, GitHub Actions  
 https://github.com/tqyyds/bnpl-merchant-decision-support
 
+Live synthetic demo: https://tqyyds.github.io/bnpl-merchant-decision-support/
+
 - Developed an end-to-end merchant decision-support system, processing 14.2M transactions and 500K consumer records through versioned ETL, validated joins and traceable feature pipelines.
 - Designed 90-day/28-day temporal experiments comparing revenue baselines, Ridge, gradient boosting and a three-seed causal TCN; retained the 90-day baseline under a fixed selection gate, with historical validation NDCG@100 of 0.9939.
 - Built binary MILP merchant portfolio selection and an interactive dashboard for evidence inspection, confidence diagnostics and scenario comparison, with synthetic public demos and automated contract checks.
