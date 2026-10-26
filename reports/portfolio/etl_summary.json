@@ -1,0 +1,31 @@
+{
+  "source": "reports/etl/v1_2_manifest.json",
+  "run_id": "v1_2",
+  "source_sha256": "bdcb16e76817675c90684135d092fa968e969a11139deeffabf941e139780f1d",
+  "outputs": {
+    "transaction_rows": 14195505,
+    "transaction_partitions": 606,
+    "consumer_rows": 499999,
+    "merchant_rows": 4422,
+    "candidate_eligible_merchants": 4026,
+    "unknown_merchants": 396,
+    "consumer_fraud_rows": 34765,
+    "consumer_fraud_exact_duplicates_removed": 99,
+    "merchant_fraud_rows": 114,
+    "merchant_fraud_exact_duplicates_removed": 0,
+    "category_raw_variants": 971,
+    "category_normalised_values": 25,
+    "geo_match_status": {
+      "matched_poa": 416334,
+      "postcode_absent_nationally": 83035,
+      "state_postcode_mismatch": 484,
+      "poa_feature_unavailable": 146
+    },
+    "seifa_match_status": {
+      "matched": 413641,
+      "not_geo_matched": 83665,
+      "poa_score_unavailable": 2693
+    }
+  },
+  "scope": "Historical aggregate evidence; no transaction or merchant rows."
+}

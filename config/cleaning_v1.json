@@ -1,0 +1,38 @@
+{
+  "policy_version": "1.1.0",
+  "consumer_privacy": {
+    "source_fields_retained": ["consumer_id", "state", "postcode"],
+    "derived_geography_fields": "allow_listed_poa_features_and_status"
+  },
+  "unknown_merchants": {
+    "transaction_action": "retain_and_flag",
+    "candidate_action": "exclude_without_master_record",
+    "status_field": "merchant_master_status"
+  },
+  "fraud": {
+    "duplicate_action": "drop_exact_duplicates_at_native_daily_grain",
+    "conflicting_duplicate_action": "fail",
+    "order_action": "preserve_probability_and_presence_flags",
+    "threshold": null,
+    "transaction_action": "retain"
+  },
+  "geography": {
+    "primary_geography": "POA_2021",
+    "join_fields": ["state", "postcode4"],
+    "unmatched_action": "retain_null_features_and_status",
+    "sa2_action": "exclude_from_primary_pipeline_sensitivity_only"
+  },
+  "merchant_category": {
+    "parser_version": "1.0.0",
+    "normalisation": ["casefold", "collapse_internal_whitespace", "trim"],
+    "unparseable_action": "fail"
+  },
+  "amount": {
+    "raw_value_action": "retain",
+    "derived_fields": ["dollar_value_log1p", "amount_tail_p99", "amount_tail_p999"],
+    "threshold_method": "exact_full_dataset_quantiles",
+    "quantiles": [0.99, 0.999],
+    "winsorise": false,
+    "delete_outliers": false
+  }
+}

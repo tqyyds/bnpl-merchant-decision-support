@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Merchant Portfolio · Engine Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="product.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+  <div class="shell">
+    <aside>
+      <div class="brand-icon" aria-hidden="true">M<span>↗</span></div>
+      <div class="brand">Merchant Portfolio</div>
+      <p class="brand-sub">BNPL decision workspace</p>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav aria-label="Dashboard sections">
+        <button type="button" data-page="overview" aria-current="page"><span aria-hidden="true">◈</span>Portfolio overview</button>
+        <button type="button" data-page="explorer"><span aria-hidden="true">⌕</span>Merchant explorer</button>
+        <button type="button" data-page="risk"><span aria-hidden="true">◇</span>Risk evidence</button>
+        <button type="button" data-page="confidence"><span aria-hidden="true">◎</span>Confidence review</button>
+        <button type="button" data-page="scenarios"><span aria-hidden="true">⇄</span>Scenario comparison</button>
+        <button type="button" data-page="engines"><span aria-hidden="true">⌘</span>Engine connections</button>
+      </nav>
+      <div class="sidebar-note"><span class="live-dot"></span><strong>Local output reader</strong><p>Review saved recommendations and evidence from one engine run.</p><small>Course merchant IDs are synthetic. Revenue is an estimate, not profit.</small></div>
+      <div class="sidebar-footer">Seven engines · One decision view</div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <header class="topline"><div><div class="eyebrow">STRATEGY / MERCHANT SELECTION</div><h1 id="page-title">Portfolio overview</h1><p id="page-subtitle">Understand the shortlist. Inspect the evidence.</p></div><div class="header-actions"><span id="connection-badge" class="pill neutral">Connecting</span><button id="refresh" class="button secondary" type="button">↻ Refresh outputs</button></div></header>
+      <section class="source-panel" aria-label="Engine result selection">
+        <label>Source<select id="source"><option value="engine">Local engines</option><option value="demo">Synthetic demo</option></select></label>
+        <label>Run<select id="run"></select></label>
+        <label>Window<select id="split"></select></label>
+        <label>Cutoff<select id="cutoff"></select></label>
+        <label>Saved scenario<select id="scenario"></select></label>
+      </section>
+      <div id="feedback" role="status" aria-live="polite"></div>
+      <div id="error" class="error-panel" role="alert" hidden><h2>Engine outputs could not be loaded</h2><p id="error-message"></p><p>Check the source run, then refresh. For a layout preview, explicitly choose Synthetic demo.</p><button id="retry" class="button" type="button">Try again</button></div>
+      <div id="loading" class="loading-panel" hidden><span class="spinner" aria-hidden="true"></span> Loading engine outputs…</div>
+      <div id="workspace" hidden>
+        <div id="provenance" class="provenance"></div>
+        <section id="overview" class="page">
+          <div class="portfolio-hero"><div><div class="eyebrow">CURRENT ENGINE RECOMMENDATION</div><h2 id="hero-title">A portfolio backed by evidence</h2><p id="hero-description"></p></div><button id="export" class="button" type="button">↓ Export shortlist</button></div>
+          <div id="kpis" class="kpis"></div>
+          <div class="overview-grid"><section class="panel"><div class="panel-heading"><div><h2>Portfolio composition</h2><p>Merchant count by operating activity</p></div><span class="pill neutral">Selected only</span></div><div id="industry-mix"></div></section><section class="panel"><div class="panel-heading"><div><h2>Outcome evidence</h2><p>Observed comparison under the same constraints</p></div></div><div id="comparison"></div></section></div>
+          <section class="panel section"><div class="panel-heading"><div><h2>Priority merchants</h2><p>Top 10 of the saved overall shortlist</p></div><button id="explore-selected" class="button secondary" type="button">Explore full shortlist →</button></div><div id="priority-table" class="table-wrap"></div></section>
+          <section class="panel section"><div class="panel-heading"><div><h2>Independent group Top-10</h2><p>Ranked from the full eligible group; independent of the overall portfolio.</p></div><label class="group-label">Activity group<select id="top-group"></select></label></div><div id="group-table" class="table-wrap"></div></section>
+        </section>
+        <section id="explorer" class="page" hidden>
+          <section class="panel"><div class="filters"><label class="search-label">Search merchant or ID<input id="search" type="search" placeholder="Merchant name or synthetic ID" autocomplete="off"></label><label>Activity group<select id="group-filter"><option value="">All groups</option></select></label><label>Decision<select id="decision-filter"><option value="">All candidates</option><option value="selected">Selected</option><option value="not_selected">Not selected</option><option value="ineligible">Ineligible</option><option value="group_top10">Group Top-10</option></select></label><label>Revenue confidence<select id="confidence-filter"><option value="">All evidence</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option><option value="unknown">Unknown / unresolved</option></select></label><button id="reset-filters" class="button secondary" type="button">Reset</button></div><div class="result-toolbar"><span id="result-count" role="status"></span><span>Click a merchant to inspect its evidence</span></div><div id="explorer-table" class="table-wrap"></div><div class="pagination"><button id="prev" class="button secondary" type="button">← Previous</button><span id="page-count"></span><button id="next" class="button secondary" type="button">Next →</button></div></section>
+          <section id="detail" class="panel section" aria-label="Merchant evidence"></section>
+        </section>
+        <section id="risk" class="page" hidden>
+          <label class="evidence-scope">Risk evidence scope<select id="risk-scope"><option value="selected">Selected portfolio</option><option value="eligible">All eligible merchants</option><option value="all">All candidates</option></select></label>
+          <div id="risk-content"></div>
+        </section>
+        <section id="confidence" class="page" hidden>
+          <label class="evidence-scope">Confidence evidence scope<select id="confidence-scope"><option value="selected">Selected portfolio</option><option value="eligible">All eligible merchants</option><option value="all">All candidates</option></select></label>
+          <div id="confidence-content"></div>
+        </section>
+        <section id="scenarios" class="page" hidden><div id="scenario-content"></div></section>
+        <section id="engines" class="page" hidden>
+          <section class="panel connection-intro"><h2>Seven engine connections</h2><p>Each panel shows the status supplied by the current output set. Refresh reads the files again.</p><div id="connection-summary"></div></section>
+          <div id="engine-grid" class="engine-grid section"></div>
+          <section class="panel section"><h2>Interpretation and source checks</h2><div id="warnings"></div><div id="source-checks" class="source-checks"></div></section>
+        </section>
+      </div>
+      <footer>Merchant-level evidence · Human review required · Next-28-day take-rate revenue in AUD</footer>
+    </main>
+  </div>
+</body>
+</html>

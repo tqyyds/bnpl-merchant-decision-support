@@ -1,0 +1,9 @@
+# Core dependencies. Install CPU Torch separately as documented in REPRODUCING.md.
+numpy>=1.26,<3
+pandas>=2.2,<4
+pyarrow>=14,<30
+openpyxl>=3.1,<4
+scipy>=1.11,<2
+scikit-learn>=1.5,<2
+matplotlib>=3.8,<4
+pytest>=8,<10

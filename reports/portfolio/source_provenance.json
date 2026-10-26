@@ -1,0 +1,566 @@
+{
+  "edition": "Personal public portfolio, 2026-10-26",
+  "upstream_repository": "https://github.com/Numnum-cloud/ADS-project-2-group-repo",
+  "engine_source_commit": "13a597190da83f93eb16308fbbf487dfb270dcf2",
+  "dashboard_base_commit": "1cee60849c50a1be3405bc53903af09e1c347c75",
+  "dashboard_includes_local_integration_work": true,
+  "historical_run": "seven_v1_20260906",
+  "notebook_outputs_removed": true,
+  "file_inventory": [
+    {
+      "path": "engines/__init__.py",
+      "source": "ads project 2-engines",
+      "sha256": "7eabf38c5ca119a3ab71859749b51e370b1343767734e257b54d504fa069b237"
+    },
+    {
+      "path": "engines/confidence.py",
+      "source": "ads project 2-engines",
+      "sha256": "bc7975eaa5e020d7bab93632ea509a0d47aac038635ff543d0c12030ae937771"
+    },
+    {
+      "path": "engines/context.py",
+      "source": "ads project 2-engines",
+      "sha256": "c004c86a71e06dadf4e90347c2250e149e8785f1bfa30a9c2113cc9e340622b0"
+    },
+    {
+      "path": "engines/contracts.py",
+      "source": "ads project 2-engines",
+      "sha256": "f30acf1dfe00d89f92e931137a28abc62fdff1960eb9aca4d253a47281ed844d"
+    },
+    {
+      "path": "engines/course_fraud.py",
+      "source": "ads project 2-engines",
+      "sha256": "39ab71ebb1dd158e9034742d1b634f8d538a3eae9a5e7577581177f6b6f1886d"
+    },
+    {
+      "path": "engines/data.py",
+      "source": "ads project 2-engines",
+      "sha256": "0c8a8e88d2d2c4751f8541109ee03597c7f41e59858797e95836b8d1d0a20446"
+    },
+    {
+      "path": "engines/diversification.py",
+      "source": "ads project 2-engines",
+      "sha256": "80d7133af8efb6958f1b69dfba0666540e3e3ddd4bdaa773374ddfc67626d935"
+    },
+    {
+      "path": "engines/eligibility.py",
+      "source": "ads project 2-engines",
+      "sha256": "948fd57811c2811ce85d504c648d3048450e1c269fb7f1b3a6bc70487a286103"
+    },
+    {
+      "path": "engines/portfolio.py",
+      "source": "ads project 2-engines",
+      "sha256": "3a2faf7bb343ef0b3c8a364ead2e3c655f81a3273269438a24cba0a5f223b326"
+    },
+    {
+      "path": "engines/revenue.py",
+      "source": "ads project 2-engines",
+      "sha256": "6ba523fa170e8a543915e87bfd927258e9696c9c3a7eb35349ea4ae5afa4c5d3"
+    },
+    {
+      "path": "engines/risk.py",
+      "source": "ads project 2-engines",
+      "sha256": "3e521cb40aea7c1057913077c0a30d0a5446828d97bc66516b8a6f3d4396f0cd"
+    },
+    {
+      "path": "engines/risk_labels.py",
+      "source": "ads project 2-engines",
+      "sha256": "ebdee978e9201ccfb48cde24fee1bbb05a7c45123cbbc6b1dff8f307887e9bf6"
+    },
+    {
+      "path": "engines/risk_policy.py",
+      "source": "ads project 2-engines",
+      "sha256": "84673cc6ee215f917fe194500a59574ec17c0d30fc18b7fd390304913718932b"
+    },
+    {
+      "path": "engines/strategy.py",
+      "source": "ads project 2-engines",
+      "sha256": "30648844e88302329814e8cfc4380c6515c2cbb9e87e59464f52127227ac5ee6"
+    },
+    {
+      "path": "engines/system.py",
+      "source": "ads project 2-engines",
+      "sha256": "684198df4477168cfeedeafd650c51c3f28855b128c37f998a8e7d0164b06f41"
+    },
+    {
+      "path": "engines/tcn.py",
+      "source": "ads project 2-engines",
+      "sha256": "8c7b128dab6652e63f627c37bc321e7b3b82e111fbdab8afa23b0b7322f20369"
+    },
+    {
+      "path": "engines/train.py",
+      "source": "ads project 2-engines",
+      "sha256": "0e292cc9f24d5383d497f2240c4bf684fb908b4bf076679bef1a9fb0a1b4ca23"
+    },
+    {
+      "path": "src/bnpl_analysis/__init__.py",
+      "source": "ads project 2-engines",
+      "sha256": "0fd873c3930caf471d899ebfb8f9866b5afc7cc6c98d3c0efd1f97d8e5f5f058"
+    },
+    {
+      "path": "src/bnpl_analysis/baselines.py",
+      "source": "ads project 2-engines",
+      "sha256": "b1a0fb96f82be33b2bd25eea499ec439a338ba1b64e7d25450e343211c6207f9"
+    },
+    {
+      "path": "src/bnpl_analysis/common.py",
+      "source": "ads project 2-engines",
+      "sha256": "d7e71c784eef63d7f259dd95854ba7988fe0fc0205e1c9bd73ca5c9b1ea28d80"
+    },
+    {
+      "path": "src/bnpl_analysis/customer_context.py",
+      "source": "ads project 2-engines",
+      "sha256": "2dd79540ccd41882273bafa3bc67e992042448eee75e7c2580d31c053cf5131c"
+    },
+    {
+      "path": "src/bnpl_analysis/eda.py",
+      "source": "ads project 2-engines",
+      "sha256": "d9e2aa6a1b4a2f882fe9e54358544827e41546dc382e777aab7d04a3a06dbfe1"
+    },
+    {
+      "path": "src/bnpl_analysis/feature_contract.py",
+      "source": "ads project 2-engines",
+      "sha256": "2430013335f747ad701481e8d1bc65de83b6f89394e4e1489e3615fc6ac8a9dc"
+    },
+    {
+      "path": "src/bnpl_analysis/feature_qa.py",
+      "source": "ads project 2-engines",
+      "sha256": "327947c33b738da7edb7a22868ea409d17cf5303181dbac24551c09f741b2cfa"
+    },
+    {
+      "path": "src/bnpl_analysis/time_split.py",
+      "source": "ads project 2-engines",
+      "sha256": "1bf659a2ef8e3f30c12ce65826053e1f50d18153dc8e2cff52e1fc25e1aed410"
+    },
+    {
+      "path": "src/bnpl_etl/__init__.py",
+      "source": "ads project 2-engines",
+      "sha256": "479b598221f0cf010656623c880457c2077a40cfab0bcc97dc8c3df925c13dbf"
+    },
+    {
+      "path": "src/bnpl_etl/cli.py",
+      "source": "ads project 2-engines",
+      "sha256": "0ebca50f39db09be91468a6d373b78e1e802de94bc1c1b893771249af34c0f51"
+    },
+    {
+      "path": "src/bnpl_etl/pipeline.py",
+      "source": "ads project 2-engines",
+      "sha256": "a42cc0931ae360749f8869f93f6f49ab46a357ba04a892bf94fd3693493c3e2b"
+    },
+    {
+      "path": "src/bnpl_etl/transforms.py",
+      "source": "ads project 2-engines",
+      "sha256": "673aecd497f02031f26b46b1ad2ea3dd0cb89f83634acff883deebd63579cb70"
+    },
+    {
+      "path": "src/run_artifacts.py",
+      "source": "ads project 2-engines",
+      "sha256": "fe1e090247f574aa4f28737e4e23f1a5f486d2d4487d005bff464eaff46c0598"
+    },
+    {
+      "path": "config/analysis_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "c649878adbe781b08534b91fd8fd4cc6e7fd0ead1dc4cfe233c19acf3665cb3e"
+    },
+    {
+      "path": "config/baseline_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "5debde7051dac416dd0c0ca8aace9be5a342f66e7151f1d4282dc495693ba8aa"
+    },
+    {
+      "path": "config/cleaning_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "f61e9853f75fe2f2a99acdbaf26775cd1d0d5334d6631ead0bfc750c879dc353"
+    },
+    {
+      "path": "config/course_fraud_model_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "0fc961a711a02ee38b1cb9fa9dec35a70bc0ea2190e863e4a2ab022c94b67fa3"
+    },
+    {
+      "path": "config/risk_label_contract_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "1f7b30a0b531527b5c0dcd4c67a17f9d0825c7dd9b1c2d0ca017cf0dfe3e8025"
+    },
+    {
+      "path": "config/seven_engine_contract_v1.json",
+      "source": "ads project 2-engines",
+      "sha256": "a3d21de10e5188ea0029222d9bb0c4a50f41c04f53909d2f0d0f9db5d3da3b65"
+    },
+    {
+      "path": "tests/test_analysis.py",
+      "source": "ads project 2-engines",
+      "sha256": "5634f41cf9f41e919e332449b747b07192701684c31bda23a8ff7da112ffd615"
+    },
+    {
+      "path": "tests/test_baselines.py",
+      "source": "ads project 2-engines",
+      "sha256": "306f5586a81956b47a764a7258f9e2f49509d59a5137d36104b68ede626348ee"
+    },
+    {
+      "path": "tests/test_course_fraud.py",
+      "source": "ads project 2-engines",
+      "sha256": "532c003c91926ab08c91b82ba303f13aa30313c94c0e63375fd5e82017edda04"
+    },
+    {
+      "path": "tests/test_customer_context.py",
+      "source": "ads project 2-engines",
+      "sha256": "332615746b534dc50e4d8498dc9c2b10208cca942b5d36a1faedb73d33292ab5"
+    },
+    {
+      "path": "tests/test_review_fixes.py",
+      "source": "ads project 2-engines",
+      "sha256": "8e5b50ea29969c776e111808eb2699813f4a7780d58bbe4e276c35ffbaf9ddee"
+    },
+    {
+      "path": "tests/test_risk_labels.py",
+      "source": "ads project 2-engines",
+      "sha256": "002fb1e7da6d5b42f1b9ef3aea7feacb407ff31c71f6637e5aa9f61c0d050ebd"
+    },
+    {
+      "path": "tests/test_seven_engines.py",
+      "source": "ads project 2-engines",
+      "sha256": "20cb9725ba8f55ee79bf7f5df4a637de2050b9db8ea8d1fb41e1ffce1f2a5340"
+    },
+    {
+      "path": "tests/test_transforms.py",
+      "source": "ads project 2-engines",
+      "sha256": "bf28ac83553736e30bf023eb67df26efad4baa307a9fb5702fb44f4065179662"
+    },
+    {
+      "path": "scripts/build_customer_context.py",
+      "source": "ads project 2-engines",
+      "sha256": "fa4dd25db44aadede7a81b32b2352c8c02e8867d883eccbd1fdfcabb91e3e50c"
+    },
+    {
+      "path": "scripts/build_risk_labels.py",
+      "source": "ads project 2-engines",
+      "sha256": "22f1ded54626586e856960e02fab3bd4a26b9e51d1d965ac15c6872ebe4acb54"
+    },
+    {
+      "path": "scripts/download_external_data.ps1",
+      "source": "ads project 2-engines",
+      "sha256": "bf4e101276875c8840a0945ebceae522af7ed57fff7e2c3c49502fe25f47d289"
+    },
+    {
+      "path": "scripts/execute_report_notebooks.py",
+      "source": "ads project 2-engines",
+      "sha256": "bcdd44a09566d6754bda1f4da3ee1e4dc82fea418947b7f7eb5fe6ee320716f4"
+    },
+    {
+      "path": "scripts/fit_report_layout.py",
+      "source": "ads project 2-engines",
+      "sha256": "a3231e94ff8ce16a0f7194af711ab5f60b461e3d1db6f31c89653ee474c9cd85"
+    },
+    {
+      "path": "scripts/generate_analysis_notebooks.py",
+      "source": "ads project 2-engines",
+      "sha256": "3a41e382a24e72e3593f6a7bdf46fa470aab777ca1839d8ecba3befa26dc3de4"
+    },
+    {
+      "path": "scripts/generate_raw_audit_notebook.py",
+      "source": "ads project 2-engines",
+      "sha256": "720d2738faa116877bcadb27706d430fab7a317dd22c43d957c8d6e6e7fc8f46"
+    },
+    {
+      "path": "scripts/package_clean_data.py",
+      "source": "ads project 2-engines",
+      "sha256": "8db235a29bbf5b59b340265ec93c505279227c6cbde893be9ce5749038d8e79b"
+    },
+    {
+      "path": "scripts/package_engine_results.py",
+      "source": "ads project 2-engines",
+      "sha256": "1d1ab7bd9169f12ff557d9b14d36dd52b28d72af2d8978e33cf5944669d2fe70"
+    },
+    {
+      "path": "scripts/prepare_report_sources.py",
+      "source": "ads project 2-engines",
+      "sha256": "31bab77db5a6b98855a8c8ea526d509ba43dc3bbe595e9bad3d9ab4398c3aadd"
+    },
+    {
+      "path": "scripts/report_validation_query.sql",
+      "source": "ads project 2-engines",
+      "sha256": "9d7be611a81df7fdf11bf52a685738f2c82618889ddac3b2fb10359036dc2567"
+    },
+    {
+      "path": "scripts/run_baselines.py",
+      "source": "ads project 2-engines",
+      "sha256": "bb6b1e867799412aa590a63d87aae4087bc40d1f6130e4bf53659a83ef76d6d8"
+    },
+    {
+      "path": "scripts/run_cleaned_analysis.py",
+      "source": "ads project 2-engines",
+      "sha256": "56a78a7fe019e58deef27ab9749a5e6770a4eac9974499406b13989beaf3bac0"
+    },
+    {
+      "path": "scripts/run_feature_qa.py",
+      "source": "ads project 2-engines",
+      "sha256": "d2af785cf1cec3f7fc1acc178f9522466a189ff186371e00400558cfdd79033b"
+    },
+    {
+      "path": "scripts/train_course_fraud_proxy.py",
+      "source": "ads project 2-engines",
+      "sha256": "cee9930129af78813d9dca0514befcc8bde6d28ec19bc329becaf3b312b8e8c5"
+    },
+    {
+      "path": "scripts/validate_analysis_outputs.py",
+      "source": "ads project 2-engines",
+      "sha256": "9ba395cbb661d8d73a22fed5a4165a4d931baa2516e759cf8dba57aec1c6b6c6"
+    },
+    {
+      "path": "scripts/validate_clean_features.py",
+      "source": "ads project 2-engines",
+      "sha256": "3d925554028438ff5d867151500a803fb85b4b6831632e4205b9e8bc0f47f51e"
+    },
+    {
+      "path": "scripts/validate_etl_outputs.py",
+      "source": "ads project 2-engines",
+      "sha256": "e3846ed066061dbb77f3c95434baf555413ebe0578d50914d3999062774d20e4"
+    },
+    {
+      "path": "scripts/verify_engine_results.py",
+      "source": "ads project 2-engines",
+      "sha256": "9728e275b74f2493d894194e7cf0f3bd7d3cba1f68f5c12d1878a4ebaea28bab"
+    },
+    {
+      "path": "scripts/write_engine_contract.py",
+      "source": "ads project 2-engines",
+      "sha256": "338e117ae54411c219f945351baadbea9562964b59c4979ef614e1fc79cc8512"
+    },
+    {
+      "path": "docs/analysis/course_fraud_proxy_gam.md",
+      "source": "ads project 2-engines",
+      "sha256": "b75253042cae52572eb4457d42872f463f4490cdcaaf72576cec859955fc2a4c"
+    },
+    {
+      "path": "docs/analysis/customer_context_contract.md",
+      "source": "ads project 2-engines",
+      "sha256": "d546d76fb1bb7ff18fcc159fe8d3a11da01a26395800ac82883335985ce5dbf4"
+    },
+    {
+      "path": "docs/analysis/engine_design_historical.md",
+      "source": "ads project 2-engines",
+      "sha256": "78b814114f16c1aa05c478c481139bf5db5c7b505a531518222f241b10adafd9"
+    },
+    {
+      "path": "docs/analysis/local_workflow.md",
+      "source": "ads project 2-engines",
+      "sha256": "13440200999ab734ea375a5786767c0cbd3d7c919472e15bb027568c4ffba0f2"
+    },
+    {
+      "path": "docs/analysis/reproduction_v3.md",
+      "source": "ads project 2-engines",
+      "sha256": "a2a4d66400e928aca9cd9c6df0a934e9b221eb47dbdae0b2aa7d050e2ff970fa"
+    },
+    {
+      "path": "docs/analysis/revenue_input_contract_v1.md",
+      "source": "ads project 2-engines",
+      "sha256": "62d58263db5739f27eab312ee19837fefb151a683063b7ebb044a236bb9a75ba"
+    },
+    {
+      "path": "docs/analysis/risk_label_and_loss_design.md",
+      "source": "ads project 2-engines",
+      "sha256": "eeca2979f7de79fb5645f86c8692f30dbf9b24ddf35be8fef7736f24e0291a9a"
+    },
+    {
+      "path": "docs/analysis/seven_engine_protocol.md",
+      "source": "ads project 2-engines",
+      "sha256": "ad457ad1131ef9dd46b85117957a9c7b7dc5143cc8911a0c0ac163facde78bff"
+    },
+    {
+      "path": "docs/analysis/training_plan_zh.md",
+      "source": "ads project 2-engines",
+      "sha256": "20838c28c211271955b8925f32466f83fa900180c5e6c8193123718b3abe706e"
+    },
+    {
+      "path": "docs/business_product_assessment.md",
+      "source": "ads project 2-engines",
+      "sha256": "1b06cf2ae0f1e0a2149bb0c523eda7d391b9baa4d1bf47c66d0471a07fdf2717"
+    },
+    {
+      "path": "docs/cleaning/README.md",
+      "source": "ads project 2-engines",
+      "sha256": "d90ea237caf86e6536fd8afa3810dcb4d4c0a3bdefdb30676c39c1024f352386"
+    },
+    {
+      "path": "docs/conceptual_pipeline.md",
+      "source": "ads project 2-engines",
+      "sha256": "526a6e404742cf42097c50cb93f916b659b494b6168d1ca7cda65c21c6cc2ff6"
+    },
+    {
+      "path": "docs/dashboard_specification.md",
+      "source": "ads project 2-engines",
+      "sha256": "cf8936ebf13285b64fd09f6b30ea49c69e58ff927afd0423801d59c2280b49ed"
+    },
+    {
+      "path": "docs/data_dictionary.md",
+      "source": "ads project 2-engines",
+      "sha256": "64dd726db6ef97f37c864f9ebe5be0e14530e3d3954aa60e0b6da6978a46061d"
+    },
+    {
+      "path": "docs/data_findings.md",
+      "source": "ads project 2-engines",
+      "sha256": "402c95ca7b41eb053a95a42ca0b3ee63fb1c10d02bdc9106614c8eafb23871ff"
+    },
+    {
+      "path": "docs/implementation_roadmap.md",
+      "source": "ads project 2-engines",
+      "sha256": "5d51fa29aa112a1bf5988d86bf9b397427f0eed962acc58976f0f33ac5b438bc"
+    },
+    {
+      "path": "docs/preclean/cleaning_readiness_checklist.md",
+      "source": "ads project 2-engines",
+      "sha256": "f0db47503046d08b83cb3879aad0145fa94648795505ff009c62186951990692"
+    },
+    {
+      "path": "docs/preclean/cleaning_specification.md",
+      "source": "ads project 2-engines",
+      "sha256": "139e968678a93a80bf5c79e632b050d9e35f726a83981847b94f45eab6e99d46"
+    },
+    {
+      "path": "docs/preclean/data_quality_report.md",
+      "source": "ads project 2-engines",
+      "sha256": "25e6676edda29292d11c3613c54162205d2585b00f12403ec5b9fcb4f77413a1"
+    },
+    {
+      "path": "docs/preclean/decision_log.md",
+      "source": "ads project 2-engines",
+      "sha256": "97796478065fedb62029ed2cb266ee71fe09a70b1799365200b6f706b25289d7"
+    },
+    {
+      "path": "docs/preclean/external_feature_dictionary.md",
+      "source": "ads project 2-engines",
+      "sha256": "67ce608ade16f36d2164eb24d8b520f1a9fe365f9a7c062c1455e3c8978a058f"
+    },
+    {
+      "path": "docs/preclean/external_source_register.md",
+      "source": "ads project 2-engines",
+      "sha256": "e3a066224bc335ceb316252cfba7adf8c439b6bd6bb8b94f18af2c81037a8a5d"
+    },
+    {
+      "path": "docs/preclean/issue_register.md",
+      "source": "ads project 2-engines",
+      "sha256": "e8c719b61318538fad62a56f6bbee3574fa46b248610d85df098f4a803046554"
+    },
+    {
+      "path": "docs/preclean/raw_data_contract.md",
+      "source": "ads project 2-engines",
+      "sha256": "3a762653628d73d3264b74d3d05f66bdb65a35c53dbc14501178109d2767f359"
+    },
+    {
+      "path": "docs/preclean/raw_data_inventory.md",
+      "source": "ads project 2-engines",
+      "sha256": "6873b90d98d8377014912c2c5ce7bd879af47e9236193dc8f11dfd0995b59359"
+    },
+    {
+      "path": "docs/preclean/raw_schema_dictionary.md",
+      "source": "ads project 2-engines",
+      "sha256": "56ba8f054579fbde70502e0815638c97c18419512fad399ee31e96e2856b71c0"
+    },
+    {
+      "path": "docs/preclean/requirements_traceability.md",
+      "source": "ads project 2-engines",
+      "sha256": "25f2629b48fd8081dc722f1ae0f0b4ed0a3a18be1cf5544dccc27fd40586f96a"
+    },
+    {
+      "path": "docs/preclean/source_manifest.json",
+      "source": "ads project 2-engines",
+      "sha256": "bc4dc41a7f45b9135bf3ebbf433b559d4471148776004c6d27e1839cb3130f47"
+    },
+    {
+      "path": "dashboard/__init__.py",
+      "source": "ads project 2",
+      "sha256": "89a9bebd3edbc7b843b4382b21316fa1b0d3d45c1ddce14a23c9ee1d177e9e25"
+    },
+    {
+      "path": "dashboard/adapter-config.json",
+      "source": "ads project 2",
+      "sha256": "4d753679fafaa60a6be0b3c42f002fbda1dc6fb09126099040098b2e13cb47d9"
+    },
+    {
+      "path": "dashboard/adapter.py",
+      "source": "ads project 2",
+      "sha256": "a28cdb30898620684811092464fb38ab1a3416b4fbb0139a9447630d166ac1cd"
+    },
+    {
+      "path": "dashboard/api-client.js",
+      "source": "ads project 2",
+      "sha256": "86e6a0cf201846fb8f0e6d5ec928228a7a0d9e6c55c73499cfd52562c3e99b49"
+    },
+    {
+      "path": "dashboard/app.js",
+      "source": "ads project 2",
+      "sha256": "4253e1b8c043e8f95eac71fefd58c994a041ad18a2118b46af63c76b71f57b84"
+    },
+    {
+      "path": "dashboard/bundle_adapter.py",
+      "source": "ads project 2",
+      "sha256": "09b46e87eb94e9471a6bc39e899bf6d8686d2339433ffed6f655ffd8e79b2de3"
+    },
+    {
+      "path": "dashboard/demo.json",
+      "source": "ads project 2",
+      "sha256": "8cf151c4708f78d3794aa6dbc6438f58420b633874fc3c950e9d40378fec6dbf"
+    },
+    {
+      "path": "dashboard/ENGINE_AUDIT_2026-10-05.md",
+      "source": "ads project 2",
+      "sha256": "9f53dca86c25c89d37c7e7aa0840d4de2c1808a95b90bca08a0871643c71dac3"
+    },
+    {
+      "path": "dashboard/index.html",
+      "source": "ads project 2",
+      "sha256": "d64ae30e3a776ebc2c32ed57186dbce958e985db905de6f2522e54680c41a041"
+    },
+    {
+      "path": "dashboard/INTEGRATION.md",
+      "source": "ads project 2",
+      "sha256": "9da06115754911893c071cbb00cf6f85b9bb2c4de564f2963f9ca19a79a8ca1b"
+    },
+    {
+      "path": "dashboard/mockup.html",
+      "source": "ads project 2",
+      "sha256": "a09dc59228fab50b6999f51bedf6f7e7a17b9ab38a051eb69189023fadead3ca"
+    },
+    {
+      "path": "dashboard/product-views.js",
+      "source": "ads project 2",
+      "sha256": "4351c50827e671f89f09eaff743184aeec3389fa106e644ce0a043cddb5c0924"
+    },
+    {
+      "path": "dashboard/product.css",
+      "source": "ads project 2",
+      "sha256": "66d2c6b04098cfef975bc765fe0751976105a39d5fd0d487ad165da0b26e0ad2"
+    },
+    {
+      "path": "dashboard/README.md",
+      "source": "ads project 2",
+      "sha256": "501ef0347a94b2ae82e0275a2b4f105ce8de2f66d7b5e4debb22e22f3b6adda5"
+    },
+    {
+      "path": "dashboard/risk_interface.py",
+      "source": "ads project 2",
+      "sha256": "8fe0663604a926f9e07c31d5d689d77b5771d24afb14ce40e8acfa9f4535ac2e"
+    },
+    {
+      "path": "dashboard/server.py",
+      "source": "ads project 2",
+      "sha256": "8192674ff237459bc5368b3b05afae2cac771deecfa8a02390ff6381ff5fd6a4"
+    },
+    {
+      "path": "dashboard/styles.css",
+      "source": "ads project 2",
+      "sha256": "e17ef9c0f3a4c58180404b0259d203996a81c3f90881b7d6d43ca06407a074aa"
+    },
+    {
+      "path": "dashboard/VERIFICATION.md",
+      "source": "ads project 2",
+      "sha256": "6f3a2ecb98f93185df2bf514cb5fcc0ba8bf35521bb93c4f0ee7a576c9d3b7e3"
+    },
+    {
+      "path": "dashboard/workflow.py",
+      "source": "ads project 2",
+      "sha256": "cf01f27fb41138b757a0b4693020d423e1844fdb52720162f872ac0936b31266"
+    }
+  ]
+}

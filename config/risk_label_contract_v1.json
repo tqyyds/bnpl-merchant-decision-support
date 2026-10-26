@@ -1,0 +1,36 @@
+{
+  "contract_version": "risk_labels_v1",
+  "current_runtime_status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+  "target_initial_status": "EVIDENCE_ONLY_NO_MATURE_LABELS",
+  "maturity_window_candidates_days": [90, 120, 150],
+  "approved_maturity_window_days": null,
+  "max_post_maturity_adjustment_rate": null,
+  "minimum_mature_label_history_months": 18,
+  "merchant_label_horizon_days": 28,
+  "loss_classification_priority": null,
+  "required_sources": [],
+  "finance_reconciliation_tolerance": {
+    "max_absolute_difference_aud": null,
+    "max_relative_difference": null
+  },
+  "order_fraud_validation": {
+    "min_pr_auc": null,
+    "min_recall_at_capacity": null,
+    "max_brier_score": null,
+    "max_calibration_error": null
+  },
+  "merchant_loss_validation": {
+    "max_mae_aud": null,
+    "max_aggregate_bias_pct": null,
+    "min_top_k_loss_capture": null
+  },
+  "portfolio_validation": {
+    "max_realised_budget_breach_rate": null
+  },
+  "portfolio_policy": {
+    "loss_scenario": null,
+    "max_total_expected_net_loss_aud": null,
+    "max_expected_loss_rate": null
+  },
+  "activation_note": "Null governance fields are intentional and fail closed. Risk, Finance, source owners, and Model Governance must approve them before SHADOW or VALIDATED operation."
+}

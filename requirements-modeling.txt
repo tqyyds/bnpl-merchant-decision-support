@@ -1,0 +1,6 @@
+-r requirements-eda.txt
+scikit-learn>=1.5,<2
+scipy>=1.11,<2
+# Install the matching CPU/CUDA wheel from the official PyTorch index as needed.
+torch>=2.2,<3
+

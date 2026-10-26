@@ -1,0 +1,46 @@
+{
+  "cleaning_run_id": "v1_2",
+  "label_version": "course_delta_union_v1",
+  "label_semantics": "OBSERVED_COURSE_DELTA_NOT_FINAL_ADJUDICATION",
+  "minimum_history_days": 90,
+  "train_start": "2021-05-29",
+  "train_end": "2021-12-05",
+  "calibration_start": "2021-12-06",
+  "calibration_end": "2022-01-02",
+  "validation_start": "2022-01-03",
+  "validation_end": "2022-01-30",
+  "test_start": "2022-01-31",
+  "test_end": "2022-02-27",
+  "proxy_label_coverage_end": "2022-02-27",
+  "post_coverage_period_semantics": "UNLABELLED_SHADOW_SCORING_ONLY",
+  "evidence_window_days": 90,
+  "negative_sample_rate": 0.05,
+  "model_candidates": {
+    "linear_logistic_c": [0.1, 1.0, 10.0],
+    "spline_gam_n_knots": [4, 6, 8],
+    "spline_gam_c": [0.1, 1.0, 10.0],
+    "spline_degree": 3,
+    "calibration_method": "sigmoid"
+  },
+  "spline_qa": {
+    "minimum_unique_values": 8,
+    "maximum_zero_share": 0.95,
+    "fallback": "linear_term"
+  },
+  "label_sensitivity_variants": [
+    "UNION_PROPAGATED",
+    "CONSUMER_ONLY",
+    "SINGLE_MATCH_ONLY"
+  ],
+  "feature_ablations": [
+    "FULL",
+    "NO_HISTORY_PROXY_RATE"
+  ],
+  "review_capacities": [0.01, 0.05],
+  "primary_review_capacity": 0.05,
+  "ranking_sensitivity_lambdas": [0.0, 0.05, 0.1, 0.2],
+  "fraud_model_status": "PROXY_SHADOW",
+  "loss_model_status": "NOT_AVAILABLE",
+  "ranking_penalty_enabled": false,
+  "portfolio_loss_constraint_enabled": false
+}

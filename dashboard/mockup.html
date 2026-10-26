@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BNPL Merchant Portfolio — Concept Dashboard</title>
+  <style>
+    :root {
+      --ink: #17213b;
+      --muted: #6e778c;
+      --canvas: #f4f6fb;
+      --panel: #ffffff;
+      --line: #e1e6f0;
+      --navy: #17264b;
+      --blue: #315fdb;
+      --teal: #0a9a84;
+      --amber: #d58a15;
+      --red: #d74c62;
+      --shadow: 0 12px 35px rgba(28, 43, 82, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font: 14px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    button, input, select { font: inherit; }
+    .shell { display: grid; grid-template-columns: 248px 1fr; min-height: 100vh; }
+    aside {
+      background: var(--navy);
+      color: white;
+      padding: 28px 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+    .brand-sub { color: #abb7d4; font-size: 12px; margin: 4px 0 28px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #0b6559;
+      background: #d8fff7;
+    }
+    nav { margin-top: 24px; }
+    nav button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 12px;
+      margin: 4px 0;
+      color: #c9d2e8;
+      background: transparent;
+      cursor: pointer;
+    }
+    nav button.active, nav button:hover { color: white; background: rgba(255,255,255,.11); }
+    .aside-note {
+      margin-top: 30px;
+      padding: 14px;
+      color: #c1cae0;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 10px;
+      font-size: 12px;
+    }
+    main { padding: 30px clamp(22px, 4vw, 58px) 60px; min-width: 0; }
+    .topline { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+    h1 { margin: 0; font-size: clamp(25px, 3vw, 36px); letter-spacing: -.035em; }
+    h2 { margin: 0 0 16px; font-size: 18px; letter-spacing: -.015em; }
+    h3 { margin: 0 0 8px; font-size: 15px; }
+    .subtitle { color: var(--muted); margin: 7px 0 0; max-width: 720px; }
+    .version { text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .notice {
+      margin: 22px 0;
+      padding: 12px 15px;
+      border-radius: 10px;
+      color: #634a10;
+      background: #fff6d9;
+      border: 1px solid #f1df9e;
+    }
+    .grid { display: grid; gap: 16px; }
+    .kpis { grid-template-columns: repeat(4, 1fr); }
+    .two { grid-template-columns: 1.25fr .75fr; }
+    .panel, .kpi {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .kpi { padding: 18px 19px; }
+    .kpi-label { color: var(--muted); font-size: 12px; }
+    .kpi-value { margin-top: 5px; font-size: 25px; font-weight: 800; letter-spacing: -.025em; }
+    .kpi-foot { margin-top: 5px; color: var(--muted); font-size: 11px; }
+    .panel { padding: 20px; }
+    .section { margin-top: 18px; }
+    .controls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+    label { display: block; color: var(--muted); font-size: 12px; font-weight: 700; }
+    input[type="range"] { width: 100%; accent-color: var(--blue); }
+    input[type="search"], select {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: white;
+    }
+    .control-value { color: var(--blue); float: right; font-weight: 800; }
+    .stack-row { display: flex; align-items: center; gap: 10px; margin: 12px 0; }
+    .stack-label { width: 145px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .stack-bar { flex: 1; height: 9px; background: #edf0f6; border-radius: 999px; overflow: hidden; }
+    .stack-fill { height: 100%; background: linear-gradient(90deg, #315fdb, #55a0f1); border-radius: inherit; }
+    .stack-num { width: 25px; text-align: right; color: var(--muted); font-size: 12px; }
+    .compare { display: grid; gap: 12px; }
+    .compare-row { display: grid; grid-template-columns: 120px 1fr 70px; gap: 9px; align-items: center; }
+    .compare-track { height: 14px; background: #edf0f6; border-radius: 4px; overflow: hidden; }
+    .compare-fill { height: 100%; background: var(--blue); }
+    .compare-row:nth-child(2) .compare-fill { background: #8ea4d8; }
+    .compare-row:nth-child(3) .compare-fill { background: #bdc9e3; }
+    .toolbar { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 14px; }
+    .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 10px; }
+    table { width: 100%; border-collapse: collapse; min-width: 820px; }
+    th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      padding: 11px 12px;
+      text-align: left;
+      color: var(--muted);
+      background: #f8f9fc;
+      border-bottom: 1px solid var(--line);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    td { padding: 12px; border-bottom: 1px solid #eef1f6; }
+    tr:last-child td { border-bottom: 0; }
+    tbody tr { cursor: pointer; }
+    tbody tr:hover, tbody tr.selected-row { background: #f0f5ff; }
+    .merchant { font-weight: 750; }
+    .small { color: var(--muted); font-size: 11px; }
+    .pill { display: inline-block; border-radius: 999px; padding: 4px 8px; font-size: 11px; font-weight: 750; }
+    .pill.good { color: #086f60; background: #dcf8f1; }
+    .pill.review { color: #865913; background: #fff0d2; }
+    .pill.out { color: #687184; background: #edf0f5; }
+    .meter { width: 90px; height: 7px; background: #edf0f5; border-radius: 999px; overflow: hidden; }
+    .meter span { display: block; height: 100%; border-radius: inherit; }
+    .details { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+    .decision-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .decision-name { font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 17px 0; }
+    .stat { padding: 11px; border-radius: 9px; background: #f7f9fc; }
+    .stat strong { display: block; margin-top: 3px; font-size: 17px; }
+    .reason { padding: 10px 0 10px 23px; border-top: 1px solid #eef1f6; position: relative; }
+    .reason::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
+    .reason.warn::before { content: "!"; color: var(--amber); }
+    .quality { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .quality-item { padding: 14px; border: 1px solid var(--line); border-radius: 10px; }
+    .quality-item strong { display: block; font-size: 17px; margin-top: 3px; }
+    .footer { margin-top: 24px; color: var(--muted); font-size: 11px; text-align: center; }
+    .hidden { display: none !important; }
+    @media (max-width: 1050px) {
+      .shell { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      nav { display: flex; flex-wrap: wrap; }
+      nav button { width: auto; }
+      .aside-note { display: none; }
+      .kpis, .controls, .quality { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 680px) {
+      main { padding: 22px 14px 40px; }
+      .topline, .decision-top { display: block; }
+      .version { text-align: left; margin-top: 10px; }
+      .kpis, .two, .controls, .quality, .details, .toolbar { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <div class="brand">Merchant Portfolio</div>
+      <div class="brand-sub">BNPL decision support concept</div>
+      <span class="badge">● Synthetic demo</span>
+      <nav>
+        <button class="active" data-target="overview">▦ &nbsp;Portfolio overview</button>
+        <button data-target="explorer">⌕ &nbsp;Merchant explorer</button>
+        <button data-target="quality">✓ &nbsp;Data & governance</button>
+      </nav>
+      <div class="aside-note">
+        This mock-up contains invented merchants and values. It illustrates the proposed workflow;
+        it is not a trained model or production recommendation.
+      </div>
+    </aside>
+
+    <main>
+      <section id="overview" class="page">
+        <div class="topline">
+          <div>
+            <h1>Balanced merchant portfolio</h1>
+            <p class="subtitle">A capacity- and risk-aware shortlist for partnership review.</p>
+          </div>
+          <div class="version">Illustrative cut-off: 27 Feb 2022<br>Concept model v0.1</div>
+        </div>
+        <div class="notice"><strong>Design preview.</strong> All values below are synthetic and do not represent the supplied project data.</div>
+
+        <div class="grid kpis">
+          <div class="kpi"><div class="kpi-label">Priority merchants</div><div class="kpi-value" id="kpiCount">—</div><div class="kpi-foot">Current scenario</div></div>
+          <div class="kpi"><div class="kpi-label">Predicted take-rate revenue</div><div class="kpi-value" id="kpiValue">—</div><div class="kpi-foot">Revenue proxy, not profit</div></div>
+          <div class="kpi"><div class="kpi-label">Average risk indicator</div><div class="kpi-value" id="kpiRisk">—</div><div class="kpi-foot">Relative historical evidence</div></div>
+          <div class="kpi"><div class="kpi-label">Average confidence</div><div class="kpi-value" id="kpiConfidence">—</div><div class="kpi-foot">Volume and coverage</div></div>
+        </div>
+
+        <div class="panel section">
+          <h2>Scenario controls</h2>
+          <div class="controls">
+            <label>Portfolio capacity <span class="control-value" id="capacityValue"></span><input id="capacity" type="range" min="4" max="10" value="8"></label>
+            <label>Maximum merchant risk <span class="control-value" id="riskValue"></span><input id="maxRisk" type="range" min="30" max="80" value="60"></label>
+            <label>Maximum industry share <span class="control-value" id="capValue"></span><input id="industryCap" type="range" min="25" max="60" value="40" step="5"></label>
+            <label>Minimum confidence <span class="control-value" id="confidenceValue"></span><input id="minConfidence" type="range" min="40" max="90" value="55" step="5"></label>
+          </div>
+        </div>
+
+        <div class="grid two section">
+          <div class="panel">
+            <h2>Portfolio vs simple baselines</h2>
+            <div id="comparison" class="compare"></div>
+          </div>
+          <div class="panel">
+            <h2>Selected industry mix</h2>
+            <div id="industryMix"></div>
+          </div>
+        </div>
+
+        <div class="panel section">
+          <h2>Current priority list</h2>
+          <div id="priorityTable" class="table-wrap"></div>
+        </div>
+      </section>
+
+      <section id="explorer" class="page hidden">
+        <div class="topline">
+          <div><h1>Merchant explorer</h1><p class="subtitle">Separate commercial value, risk, and evidence confidence.</p></div>
+          <span class="badge">Synthetic demo</span>
+        </div>
+        <div class="panel section">
+          <div class="toolbar">
+            <label>Search merchant or demo ID<input id="search" type="search" placeholder="Try ‘home’ or DEMO-004"></label>
+            <label>Industry<select id="industryFilter"><option>All industries</option></select></label>
+          </div>
+          <div id="explorerTable" class="table-wrap"></div>
+        </div>
+        <div class="panel section details" id="decisionCard"></div>
+      </section>
+
+      <section id="quality" class="page hidden">
+        <div class="topline">
+          <div><h1>Data quality & governance</h1><p class="subtitle">The production view would expose limitations before a recommendation is used.</p></div>
+          <span class="badge">Example layout</span>
+        </div>
+        <div class="panel section">
+          <h2>Illustrative quality gates</h2>
+          <div class="quality">
+            <div class="quality-item"><div class="small">Schema checks</div><strong style="color:var(--teal)">Pass</strong><div class="small">Expected fields and types</div></div>
+            <div class="quality-item"><div class="small">Unmatched ABNs</div><strong style="color:var(--amber)">Warn</strong><div class="small">Quarantine before ranking</div></div>
+            <div class="quality-item"><div class="small">Fraud coverage</div><strong style="color:var(--amber)">Limited</strong><div class="small">Missing must remain unknown</div></div>
+            <div class="quality-item"><div class="small">PII in dashboard</div><strong style="color:var(--teal)">None</strong><div class="small">Merchant-level outputs only</div></div>
+          </div>
+        </div>
+        <div class="grid two section">
+          <div class="panel">
+            <h2>Model evidence to display</h2>
+            <div class="reason">Out-of-time performance versus historical GMV and revenue baselines</div>
+            <div class="reason">Top-portfolio realised value and rank correlation</div>
+            <div class="reason">Boruta selection frequency across repeated training runs</div>
+            <div class="reason">Recommendation stability when assumptions change</div>
+          </div>
+          <div class="panel">
+            <h2>Required interpretation</h2>
+            <div class="reason warn">Take-rate revenue is not profit or lifetime value</div>
+            <div class="reason warn">Risk is an indicator, not predicted credit loss</div>
+            <div class="reason warn">Customer postcode context is not merchant location</div>
+            <div class="reason warn">Not selected means outside this scenario, not rejected</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">Concept dashboard • no external assets • no supplied data • human review required</div>
+    </main>
+  </div>
+
+  <script>
+    const merchants = [
+      {id:'DEMO-001',name:'Lumen Home',industry:'Home & Living',value:184000,risk:.24,confidence:.91,growth:.22,customers:18450,repeat:.58,volatility:.18,reasons:['Strong repeat-customer behaviour','Stable monthly GMV','High evidence coverage'],warnings:['Revenue is a model estimate']},
+      {id:'DEMO-002',name:'Kindred Health',industry:'Health',value:171000,risk:.31,confidence:.88,growth:.17,customers:13220,repeat:.62,volatility:.21,reasons:['High customer retention','Broad postcode reach','Consistent historical activity'],warnings:['Requires standard commercial due diligence']},
+      {id:'DEMO-003',name:'Atlas Outdoor',industry:'Sport & Outdoor',value:166000,risk:.39,confidence:.84,growth:.35,customers:11280,repeat:.44,volatility:.33,reasons:['Strong recent growth','Large active customer base'],warnings:['Moderate seasonal volatility']},
+      {id:'DEMO-004',name:'Northstar Tech',industry:'Electronics',value:159000,risk:.54,confidence:.79,growth:.41,customers:10340,repeat:.39,volatility:.46,reasons:['High predicted value','Fast recent growth'],warnings:['Risk indicator near scenario ceiling','Higher monthly volatility']},
+      {id:'DEMO-005',name:'Paper & Pine',industry:'Home & Living',value:146000,risk:.28,confidence:.82,growth:.15,customers:9480,repeat:.51,volatility:.20,reasons:['Balanced value and risk','Good repeat-customer share'],warnings:['Customer concentration should be reviewed']},
+      {id:'DEMO-006',name:'Field Day Apparel',industry:'Fashion',value:141000,risk:.44,confidence:.73,growth:.29,customers:8920,repeat:.46,volatility:.35,reasons:['Positive growth trend','Good customer breadth'],warnings:['Medium confidence in risk evidence']},
+      {id:'DEMO-007',name:'Copper Kitchen',industry:'Home & Living',value:137000,risk:.33,confidence:.86,growth:.12,customers:8710,repeat:.55,volatility:.17,reasons:['Stable revenue history','High confidence'],warnings:['Industry concentration may limit selection']},
+      {id:'DEMO-008',name:'Mosaic Learning',industry:'Education',value:131000,risk:.21,confidence:.68,growth:.26,customers:7490,repeat:.48,volatility:.29,reasons:['Low relative risk','Positive growth'],warnings:['Shorter active history']},
+      {id:'DEMO-009',name:'Harbour Beauty',industry:'Beauty',value:126000,risk:.47,confidence:.76,growth:.19,customers:8180,repeat:.59,volatility:.31,reasons:['Strong repeat-customer rate','Solid value potential'],warnings:['Fraud coverage requires review']},
+      {id:'DEMO-010',name:'Bloom Pantry',industry:'Grocery',value:119000,risk:.18,confidence:.89,growth:.09,customers:12420,repeat:.66,volatility:.12,reasons:['Very stable activity','High repeat use','Low relative risk'],warnings:['Lower predicted value than top opportunities']},
+      {id:'DEMO-011',name:'Orbit Mobility',industry:'Electronics',value:113000,risk:.67,confidence:.71,growth:.38,customers:6350,repeat:.32,volatility:.52,reasons:['Fast growth','Attractive take-rate revenue'],warnings:['Above balanced risk ceiling','High volatility']},
+      {id:'DEMO-012',name:'Juniper Pets',industry:'Pet Care',value:108000,risk:.26,confidence:.49,growth:.14,customers:5320,repeat:.54,volatility:.24,reasons:['Good repeat-customer behaviour'],warnings:['Below default evidence-confidence threshold']}
+    ];
+
+    let selectedId = merchants[0].id;
+    const money = n => '$' + Math.round(n/1000) + 'k';
+    const pct = n => Math.round(n*100) + '%';
+    const score = m => m.value * (1 - .45*m.risk) * (.75 + .25*m.confidence);
+
+    function scenario() {
+      const capacity = +document.querySelector('#capacity').value;
+      const maxRisk = +document.querySelector('#maxRisk').value/100;
+      const industryCap = +document.querySelector('#industryCap').value/100;
+      const minConfidence = +document.querySelector('#minConfidence').value/100;
+      const maxPerIndustry = Math.max(1, Math.ceil(capacity*industryCap));
+      const counts = {};
+      const selected = [];
+      merchants.filter(m => m.risk <= maxRisk && m.confidence >= minConfidence)
+        .sort((a,b) => score(b)-score(a))
+        .forEach(m => {
+          if (selected.length < capacity && (counts[m.industry]||0) < maxPerIndustry) {
+            selected.push(m); counts[m.industry]=(counts[m.industry]||0)+1;
+          }
+        });
+      return {selected,capacity,maxRisk,industryCap,minConfidence};
+    }
+
+    function meter(value, colour) {
+      return `<div class="meter"><span style="width:${value*100}%;background:${colour}"></span></div>`;
+    }
+
+    function rowHtml(m, rank, status) {
+      const cls = status==='Prioritise' ? 'good' : status==='Manual review' ? 'review' : 'out';
+      return `<tr data-id="${m.id}"><td>${rank || '—'}</td><td><div class="merchant">${m.name}</div><div class="small">${m.id}</div></td><td>${m.industry}</td><td>${money(m.value)}</td><td>${pct(m.risk)}${meter(m.risk, m.risk>.55?'var(--red)':'var(--amber)')}</td><td>${pct(m.confidence)}${meter(m.confidence,'var(--teal)')}</td><td><span class="pill ${cls}">${status}</span></td></tr>`;
+    }
+
+    function tableHtml(rows, selected) {
+      const selectedIds = new Set(selected.map(m=>m.id));
+      const ranks = Object.fromEntries(selected.map((m,i)=>[m.id,i+1]));
+      return `<table><thead><tr><th>Rank</th><th>Merchant</th><th>Industry</th><th>Predicted revenue</th><th>Risk</th><th>Confidence</th><th>Decision</th></tr></thead><tbody>${rows.map(m=>{
+        const state = selectedIds.has(m.id) ? 'Prioritise' : (m.risk>.6 || m.confidence<.55) ? 'Manual review' : 'Not selected';
+        return rowHtml(m,ranks[m.id],state);
+      }).join('')}</tbody></table>`;
+    }
+
+    function renderOverview() {
+      const s = scenario(), rows=s.selected;
+      document.querySelector('#capacityValue').textContent=s.capacity;
+      document.querySelector('#riskValue').textContent=pct(s.maxRisk);
+      document.querySelector('#capValue').textContent=pct(s.industryCap);
+      document.querySelector('#confidenceValue').textContent=pct(s.minConfidence);
+      document.querySelector('#kpiCount').textContent=rows.length;
+      document.querySelector('#kpiValue').textContent=money(rows.reduce((a,m)=>a+m.value,0));
+      document.querySelector('#kpiRisk').textContent=rows.length?pct(rows.reduce((a,m)=>a+m.risk,0)/rows.length):'—';
+      document.querySelector('#kpiConfidence').textContent=rows.length?pct(rows.reduce((a,m)=>a+m.confidence,0)/rows.length):'—';
+
+      const total=rows.reduce((a,m)=>a+m.value,0), comparisons=[['Recommended',total],['Historical GMV',total*.91],['Customer count',total*.84]], max=Math.max(...comparisons.map(x=>x[1]),1);
+      document.querySelector('#comparison').innerHTML=comparisons.map(x=>`<div class="compare-row"><span>${x[0]}</span><div class="compare-track"><div class="compare-fill" style="width:${x[1]/max*100}%"></div></div><strong>${money(x[1])}</strong></div>`).join('');
+
+      const mix={}; rows.forEach(m=>mix[m.industry]=(mix[m.industry]||0)+1);
+      document.querySelector('#industryMix').innerHTML=Object.entries(mix).sort((a,b)=>b[1]-a[1]).map(x=>`<div class="stack-row"><div class="stack-label">${x[0]}</div><div class="stack-bar"><div class="stack-fill" style="width:${x[1]/Math.max(...Object.values(mix),1)*100}%"></div></div><div class="stack-num">${x[1]}</div></div>`).join('') || '<div class="small">No merchants meet the scenario.</div>';
+      document.querySelector('#priorityTable').innerHTML=tableHtml(rows,rows);
+    }
+
+    function renderExplorer() {
+      const s=scenario(), q=document.querySelector('#search').value.toLowerCase(), industry=document.querySelector('#industryFilter').value;
+      const rows=merchants.filter(m=>(!q || (m.name+' '+m.id).toLowerCase().includes(q)) && (industry==='All industries' || m.industry===industry));
+      document.querySelector('#explorerTable').innerHTML=tableHtml(rows,s.selected);
+      document.querySelectorAll('#explorerTable tbody tr').forEach(tr=>tr.addEventListener('click',()=>{selectedId=tr.dataset.id;renderExplorer();}));
+      const m=merchants.find(x=>x.id===selectedId) || rows[0] || merchants[0], selected=s.selected.some(x=>x.id===m.id);
+      document.querySelectorAll(`#explorerTable tr[data-id="${m.id}"]`).forEach(x=>x.classList.add('selected-row'));
+      document.querySelector('#decisionCard').innerHTML=`
+        <div><div class="decision-top"><div><div class="decision-name">${m.name}</div><div class="small">${m.id} • ${m.industry}</div></div><span class="pill ${selected?'good':'out'}">${selected?'Prioritise':'Not selected this scenario'}</span></div>
+          <div class="stats"><div class="stat"><span class="small">Predicted revenue</span><strong>${money(m.value)}</strong></div><div class="stat"><span class="small">Risk indicator</span><strong>${pct(m.risk)}</strong></div><div class="stat"><span class="small">Confidence</span><strong>${pct(m.confidence)}</strong></div></div>
+          <h3>Why this merchant stands out</h3>${m.reasons.map(x=>`<div class="reason">${x}</div>`).join('')}
+        </div>
+        <div><h3>Evidence</h3><div class="stats"><div class="stat"><span class="small">Customers</span><strong>${m.customers.toLocaleString()}</strong></div><div class="stat"><span class="small">Repeat rate</span><strong>${pct(m.repeat)}</strong></div><div class="stat"><span class="small">Growth</span><strong>${pct(m.growth)}</strong></div></div>
+          <h3>Warnings and limitations</h3>${m.warnings.map(x=>`<div class="reason warn">${x}</div>`).join('')}<div class="reason warn">Synthetic demonstration record; human review required</div>
+        </div>`;
+    }
+
+    [...new Set(merchants.map(m=>m.industry))].sort().forEach(i=>document.querySelector('#industryFilter').insertAdjacentHTML('beforeend',`<option>${i}</option>`));
+    document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
+      document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden')); document.querySelector('#'+btn.dataset.target).classList.remove('hidden');
+      if(btn.dataset.target==='explorer') renderExplorer();
+    }));
+    ['capacity','maxRisk','industryCap','minConfidence'].forEach(id=>document.querySelector('#'+id).addEventListener('input',()=>{renderOverview();renderExplorer();}));
+    document.querySelector('#search').addEventListener('input',renderExplorer);
+    document.querySelector('#industryFilter').addEventListener('change',renderExplorer);
+    renderOverview(); renderExplorer();
+  </script>
+</body>
+</html>

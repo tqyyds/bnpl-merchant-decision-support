@@ -1,0 +1,1447 @@
+{
+  "api_version": "1.0",
+  "source": "synthetic_demo",
+  "source_label": "Synthetic demo",
+  "run": "demo_preview_v1",
+  "split": "latest",
+  "cutoff": "2022-10-26",
+  "scenario": "primary",
+  "champion": "Invented demonstration",
+  "loaded_at": "2026-10-04T09:48:02.224705+00:00",
+  "integrity": "SYNTHETIC_NOT_ENGINE_OUTPUT",
+  "source_fingerprint": "synthetic-demo-v1",
+  "solver": {
+    "status": "DEMO_ONLY",
+    "gap": null,
+    "count": 10,
+    "revenue": 89000
+  },
+  "summary": {
+    "candidates": 30,
+    "eligible": 28,
+    "selected": 10,
+    "predicted_revenue": 89000
+  },
+  "metrics": null,
+  "warnings": [
+    "Synthetic layout preview. No trained engine results."
+  ],
+  "engines": [
+    {
+      "id": "revenue",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "confidence",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "risk",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "diversification",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "strategic_fit",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "status": "SYNTHETIC_DEMO",
+      "rows": 30,
+      "versions": [
+        "demo-v1"
+      ]
+    }
+  ],
+  "groups": [
+    "Home & Living",
+    "Technology",
+    "Mobility",
+    "Culture",
+    "Personal Care"
+  ],
+  "merchants": [
+    {
+      "id": "DEMO-001",
+      "name": "Demo Merchant 01",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 1,
+      "group_rank": 1,
+      "prediction": 9800,
+      "confidence": {
+        "lower": 5900,
+        "upper": 13900,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 100,
+        "customers": 30,
+        "active_days": 80,
+        "revenue": 29400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-002",
+      "name": "Demo Merchant 02",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 2,
+      "group_rank": 1,
+      "prediction": 9600,
+      "confidence": {
+        "lower": 5800,
+        "upper": 13800,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 200,
+        "customers": 60,
+        "active_days": 80,
+        "revenue": 28800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-003",
+      "name": "Demo Merchant 03",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 3,
+      "group_rank": 1,
+      "prediction": 9400,
+      "confidence": {
+        "lower": 5700,
+        "upper": 13700,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 300,
+        "customers": 90,
+        "active_days": 80,
+        "revenue": 28200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-004",
+      "name": "Demo Merchant 04",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 4,
+      "group_rank": 1,
+      "prediction": 9200,
+      "confidence": {
+        "lower": 5600,
+        "upper": 13600,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 400,
+        "customers": 120,
+        "active_days": 80,
+        "revenue": 27600,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-005",
+      "name": "Demo Merchant 05",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 5,
+      "group_rank": 1,
+      "prediction": 9000,
+      "confidence": {
+        "lower": 5500,
+        "upper": 13500,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 500,
+        "customers": 150,
+        "active_days": 80,
+        "revenue": 27000,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-006",
+      "name": "Demo Merchant 06",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 6,
+      "group_rank": 2,
+      "prediction": 8800,
+      "confidence": {
+        "lower": 5400,
+        "upper": 13400,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 600,
+        "customers": 180,
+        "active_days": 80,
+        "revenue": 26400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-007",
+      "name": "Demo Merchant 07",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 7,
+      "group_rank": 2,
+      "prediction": 8600,
+      "confidence": {
+        "lower": 5300,
+        "upper": 13300,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 700,
+        "customers": 210,
+        "active_days": 80,
+        "revenue": 25800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-008",
+      "name": "Demo Merchant 08",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 8,
+      "group_rank": 2,
+      "prediction": 8400,
+      "confidence": {
+        "lower": 5200,
+        "upper": 13200,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 800,
+        "customers": 240,
+        "active_days": 80,
+        "revenue": 25200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-009",
+      "name": "Demo Merchant 09",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 9,
+      "group_rank": 2,
+      "prediction": 8200,
+      "confidence": {
+        "lower": 5100,
+        "upper": 13100,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 900,
+        "customers": 270,
+        "active_days": 80,
+        "revenue": 24600,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-010",
+      "name": "Demo Merchant 10",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "selected",
+      "rank": 10,
+      "group_rank": 2,
+      "prediction": 8000,
+      "confidence": {
+        "lower": 5000,
+        "upper": 13000,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1000,
+        "customers": 300,
+        "active_days": 80,
+        "revenue": 24000,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-011",
+      "name": "Demo Merchant 11",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 3,
+      "prediction": 7800,
+      "confidence": {
+        "lower": 4900,
+        "upper": 12900,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1100,
+        "customers": 330,
+        "active_days": 80,
+        "revenue": 23400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-012",
+      "name": "Demo Merchant 12",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 3,
+      "prediction": 7600,
+      "confidence": {
+        "lower": 4800,
+        "upper": 12800,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1200,
+        "customers": 360,
+        "active_days": 80,
+        "revenue": 22800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-013",
+      "name": "Demo Merchant 13",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 3,
+      "prediction": 7400,
+      "confidence": {
+        "lower": 4700,
+        "upper": 12700,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1300,
+        "customers": 390,
+        "active_days": 80,
+        "revenue": 22200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-014",
+      "name": "Demo Merchant 14",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 3,
+      "prediction": 7200,
+      "confidence": {
+        "lower": 4600,
+        "upper": 12600,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1400,
+        "customers": 420,
+        "active_days": 80,
+        "revenue": 21600,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-015",
+      "name": "Demo Merchant 15",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 3,
+      "prediction": 7000,
+      "confidence": {
+        "lower": 4500,
+        "upper": 12500,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1500,
+        "customers": 450,
+        "active_days": 80,
+        "revenue": 21000,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-016",
+      "name": "Demo Merchant 16",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 4,
+      "prediction": 6800,
+      "confidence": {
+        "lower": 4400,
+        "upper": 12400,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1600,
+        "customers": 480,
+        "active_days": 80,
+        "revenue": 20400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-017",
+      "name": "Demo Merchant 17",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 4,
+      "prediction": 6600,
+      "confidence": {
+        "lower": 4300,
+        "upper": 12300,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1700,
+        "customers": 510,
+        "active_days": 80,
+        "revenue": 19800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-018",
+      "name": "Demo Merchant 18",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 4,
+      "prediction": 6400,
+      "confidence": {
+        "lower": 4200,
+        "upper": 12200,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1800,
+        "customers": 540,
+        "active_days": 80,
+        "revenue": 19200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-019",
+      "name": "Demo Merchant 19",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 4,
+      "prediction": 6200,
+      "confidence": {
+        "lower": 4100,
+        "upper": 12100,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 1900,
+        "customers": 570,
+        "active_days": 80,
+        "revenue": 18600,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-020",
+      "name": "Demo Merchant 20",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 4,
+      "prediction": 6000,
+      "confidence": {
+        "lower": 4000,
+        "upper": 12000,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2000,
+        "customers": 600,
+        "active_days": 80,
+        "revenue": 18000,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-021",
+      "name": "Demo Merchant 21",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 5,
+      "prediction": 5800,
+      "confidence": {
+        "lower": 3900,
+        "upper": 11900,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2100,
+        "customers": 630,
+        "active_days": 80,
+        "revenue": 17400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-022",
+      "name": "Demo Merchant 22",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 5,
+      "prediction": 5600,
+      "confidence": {
+        "lower": 3800,
+        "upper": 11800,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2200,
+        "customers": 660,
+        "active_days": 80,
+        "revenue": 16800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-023",
+      "name": "Demo Merchant 23",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 5,
+      "prediction": 5400,
+      "confidence": {
+        "lower": 3700,
+        "upper": 11700,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2300,
+        "customers": 690,
+        "active_days": 80,
+        "revenue": 16200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-024",
+      "name": "Demo Merchant 24",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 5,
+      "prediction": 5200,
+      "confidence": {
+        "lower": 3600,
+        "upper": 11600,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2400,
+        "customers": 720,
+        "active_days": 80,
+        "revenue": 15600,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-025",
+      "name": "Demo Merchant 25",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 5,
+      "prediction": 5000,
+      "confidence": {
+        "lower": 3500,
+        "upper": 11500,
+        "reliability": 0.76,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2500,
+        "customers": 750,
+        "active_days": 80,
+        "revenue": 15000,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-026",
+      "name": "Demo Merchant 26",
+      "category": "Home & Living",
+      "group": "Home & Living",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 6,
+      "prediction": 4800,
+      "confidence": {
+        "lower": 3400,
+        "upper": 11400,
+        "reliability": 0.62,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2600,
+        "customers": 780,
+        "active_days": 80,
+        "revenue": 14400,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-027",
+      "name": "Demo Merchant 27",
+      "category": "Technology",
+      "group": "Technology",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 6,
+      "prediction": 4600,
+      "confidence": {
+        "lower": 3300,
+        "upper": 11300,
+        "reliability": 0.48,
+        "band": "medium"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2700,
+        "customers": 810,
+        "active_days": 80,
+        "revenue": 13800,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-028",
+      "name": "Demo Merchant 28",
+      "category": "Mobility",
+      "group": "Mobility",
+      "eligible": true,
+      "disposition": "eligible_recent_history",
+      "reason_codes": "PASS",
+      "decision": "not_selected",
+      "rank": null,
+      "group_rank": 6,
+      "prediction": 4400,
+      "confidence": {
+        "lower": 3200,
+        "upper": 11200,
+        "reliability": 0.9,
+        "band": "high"
+      },
+      "risk": {
+        "status": "EVIDENCE_ONLY_NO_LOSS_LABELS",
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": 2800,
+        "customers": 840,
+        "active_days": 80,
+        "revenue": 13200,
+        "repeat_rate": 0.3,
+        "growth": 0.1
+      },
+      "diversification": {
+        "marginal_category_hhi": 0.01
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-029",
+      "name": "Demo Merchant 29",
+      "category": "Culture",
+      "group": "Culture",
+      "eligible": false,
+      "disposition": "inactive_recent_window",
+      "reason_codes": "NO_RECENT_ORDERS",
+      "decision": "ineligible",
+      "rank": null,
+      "group_rank": null,
+      "prediction": null,
+      "confidence": {
+        "lower": null,
+        "upper": null,
+        "reliability": null,
+        "band": null
+      },
+      "risk": {
+        "status": null,
+        "consumer_probability_max": null,
+        "merchant_probability_max": null,
+        "consumer_coverage": null,
+        "merchant_coverage": null,
+        "review_50": null,
+        "review_80": null
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": null,
+        "customers": null,
+        "active_days": null,
+        "revenue": null,
+        "repeat_rate": null,
+        "growth": null
+      },
+      "diversification": {
+        "marginal_category_hhi": null
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    },
+    {
+      "id": "DEMO-030",
+      "name": "Demo Merchant 30",
+      "category": "Personal Care",
+      "group": "Personal Care",
+      "eligible": false,
+      "disposition": "inactive_recent_window",
+      "reason_codes": "NO_RECENT_ORDERS",
+      "decision": "ineligible",
+      "rank": null,
+      "group_rank": null,
+      "prediction": null,
+      "confidence": {
+        "lower": null,
+        "upper": null,
+        "reliability": null,
+        "band": null
+      },
+      "risk": {
+        "status": null,
+        "consumer_probability_max": 0.2,
+        "merchant_probability_max": null,
+        "consumer_coverage": 0.03,
+        "merchant_coverage": null,
+        "review_50": false,
+        "review_80": false
+      },
+      "history": {
+        "start": "2022-07-29",
+        "end": "2022-10-26",
+        "orders": null,
+        "customers": null,
+        "active_days": null,
+        "revenue": null,
+        "repeat_rate": null,
+        "growth": null
+      },
+      "diversification": {
+        "marginal_category_hhi": null
+      },
+      "strategy": {
+        "status": "NOT_CONFIGURED",
+        "score": null
+      }
+    }
+  ],
+  "export_allowed": false
+}

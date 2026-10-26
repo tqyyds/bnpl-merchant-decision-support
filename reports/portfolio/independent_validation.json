@@ -1,0 +1,39 @@
+{
+  "assessment": "Share with caveats",
+  "status": "PASS",
+  "checks": [
+    {
+      "stage": "validation_system",
+      "cutoffs": 3,
+      "model_rows": 11872,
+      "group_slots": 150,
+      "portfolio_slots": 1500,
+      "status": "PASS"
+    },
+    {
+      "stage": "test_system",
+      "cutoffs": 8,
+      "model_rows": 31444,
+      "group_slots": 400,
+      "portfolio_slots": 4000,
+      "status": "PASS"
+    },
+    {
+      "stage": "latest_system",
+      "cutoffs": 1,
+      "model_rows": 3961,
+      "group_slots": 50,
+      "portfolio_slots": 500,
+      "status": "PASS"
+    }
+  ],
+  "required_caveats": [
+    "insufficient empirical interval calibration",
+    "no portfolio joint guarantee",
+    "synthetic ABN and unverified static as-of attributes",
+    "no real fraud losses or onboarding approval",
+    "latest future income unavailable"
+  ],
+  "read_only_audit": true,
+  "freeze_sha256": "49855d57a65f61ea92aa11467e6f32b3851cbf9c267192ab0efb58120d29262b"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "model": "hgb_log_6",
+    "mean_validation_ndcg": 0.9647236505,
+    "mean_validation_oracle_capture": 0.9940795629,
+    "mean_validation_mae_aud": 445.099380217,
+    "replaces_baseline": false
+  },
+  {
+    "model": "hgb_poisson_12",
+    "mean_validation_ndcg": 0.9809134746,
+    "mean_validation_oracle_capture": 0.9931455494,
+    "mean_validation_mae_aud": 512.4972875812,
+    "replaces_baseline": false
+  },
+  {
+    "model": "ridge_4",
+    "mean_validation_ndcg": 0.9882169473,
+    "mean_validation_oracle_capture": 0.9929262763,
+    "mean_validation_mae_aud": 587.7389342772,
+    "replaces_baseline": false
+  },
+  {
+    "model": "tcn",
+    "mean_validation_ndcg": 0.9901850002,
+    "mean_validation_oracle_capture": 0.995920796,
+    "mean_validation_mae_aud": 390.2689215778,
+    "replaces_baseline": false
+  },
+  {
+    "model": "trailing28_1",
+    "mean_validation_ndcg": 0.9913583579,
+    "mean_validation_oracle_capture": 0.9949244331,
+    "mean_validation_mae_aud": 362.0613586666,
+    "replaces_baseline": false
+  },
+  {
+    "model": "trailing90_0",
+    "mean_validation_ndcg": 0.9938591111,
+    "mean_validation_oracle_capture": 0.9957828142,
+    "mean_validation_mae_aud": 396.9532856391,
+    "replaces_baseline": false
+  }
+]

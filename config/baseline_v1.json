@@ -1,0 +1,22 @@
+{
+  "baseline_run_id": "baseline_v2",
+  "snapshot_run_id": "rolling_90d_28d_v3",
+  "target_column": "target_revenue",
+  "ranking_k": 100,
+  "random_seed": 30034,
+  "ridge_alpha": 10.0,
+  "hist_gradient_boosting": {
+    "learning_rate": 0.05,
+    "max_iter": 250,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0
+  },
+  "selection_primary_metric": "mean_ndcg_at_100",
+  "selection_tiebreak_metric": "mean_oracle_capture_at_100",
+  "allowed_input_splits": [
+    "train",
+    "validation"
+  ]
+}
+

@@ -1,0 +1,9 @@
+{
+  "name": "bnpl-merchant-decision-support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/test_dashboard_client.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

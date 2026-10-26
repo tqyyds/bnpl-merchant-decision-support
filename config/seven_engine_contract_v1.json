@@ -1,0 +1,79 @@
+{
+  "source_fields": [
+    "merchant_category",
+    "revenue_level",
+    "take_rate_pct",
+    "hist_gmv",
+    "hist_orders",
+    "hist_unique_customers",
+    "hist_aov",
+    "hist_amount_median",
+    "hist_amount_std",
+    "hist_active_days",
+    "hist_repeat_customer_rate",
+    "hist_customer_hhi",
+    "hist_daily_gmv_cv",
+    "hist_gmv_last28",
+    "hist_gmv_previous28",
+    "hist_gmv_last7",
+    "hist_high_value_order_share",
+    "hist_high_value_gmv_share",
+    "hist_revenue_proxy",
+    "hist_orders_per_customer",
+    "hist_gmv_per_active_day",
+    "hist_active_day_rate",
+    "hist_days_since_last_order",
+    "hist_amount_cv",
+    "hist_growth_28d",
+    "hist_no_previous28_activity",
+    "hist_gmv_log1p",
+    "hist_orders_log1p",
+    "hist_unique_customers_log1p",
+    "hist_revenue_proxy_log1p"
+  ],
+  "sequence_channels": [
+    "daily_gmv",
+    "daily_orders",
+    "daily_unique_customers",
+    "daily_aov",
+    "daily_active",
+    "daily_revenue_proxy"
+  ],
+  "groups": {
+    "Home, Garden & Decorative Arts": [
+      "antique shops - sales, repairs, and restoration services",
+      "art dealers and galleries",
+      "equipment, tool, furniture, and appliance rent al and leasing",
+      "florists supplies, nursery stock, and flowers",
+      "furniture, home furnishings and equipment shops, and manufacturers, except appliances",
+      "lawn and garden supply outlets, including nurseries"
+    ],
+    "Fashion, Personal Care & Accessories": [
+      "health and beauty spas",
+      "jewelry, watch, clock, and silverware shops",
+      "opticians, optical goods, and eyeglasses",
+      "shoe shops",
+      "watch, clock, and jewelry repair shops"
+    ],
+    "Digital, Technology & Communications": [
+      "cable, satellite, and other pay television and radio services",
+      "computer programming , data processing, and integrated systems design services",
+      "computers, computer peripheral equipment, and software",
+      "digital goods: books, movies, music",
+      "telecom"
+    ],
+    "Mobility & Outdoor": [
+      "bicycle shops - sales and service",
+      "motor vehicle supplies and new parts",
+      "tent and awning shops"
+    ],
+    "Culture, Creative, Gifts & Office": [
+      "artist supply and craft shops",
+      "books, periodicals, and newspapers",
+      "gift, card, novelty, and souvenir shops",
+      "hobby, toy and game shops",
+      "music shops - musical instruments, pianos, and sheet music",
+      "stationery, office supplies and printing and writing paper"
+    ]
+  }
+}

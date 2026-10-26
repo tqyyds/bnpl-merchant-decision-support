@@ -1,0 +1,17 @@
+{
+  "cleaning_run_id": "v1_2",
+  "cleaning_reference_run_id": "v1_2",
+  "analysis_run_id": "eda_v2",
+  "snapshot_run_id": "rolling_90d_28d_v3",
+  "eda_end": "2022-02-27",
+  "history_days": 90,
+  "target_days": 28,
+  "stride_days": 28,
+  "anchor_reference": "2022-02-27",
+  "protected_outcome_start": "2022-02-28",
+  "validation_snapshot_count": 3,
+  "target": "next_28d_take_rate_revenue",
+  "long_horizon_sensitivity_days": 90,
+  "external_context_in_predictors": false,
+  "full_dataset_tail_flags_in_predictors": false
+}
